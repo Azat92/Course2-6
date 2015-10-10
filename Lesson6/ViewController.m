@@ -13,7 +13,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.items = [@[ @0 ] mutableCopy];
+    self.items = [NSMutableArray new];
 }
 
 - (IBAction)returnHere:(UIStoryboardSegue *)sender {

@@ -33,9 +33,6 @@
                                     <animations/>
                                 </tableViewCellContentView>
                                 <animations/>
-                                <connections>
-                                    <segue destination="uDa-gY-2YL" kind="show" id="swY-72-8Ux"/>
-                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -44,7 +41,13 @@
                         </connections>
                     </tableView>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="QFR-80-L7Z"/>
+                    <navigationItem key="navigationItem" title="Root View Controller" id="QFR-80-L7Z">
+                        <barButtonItem key="rightBarButtonItem" systemItem="edit" id="SYv-ch-b9S">
+                            <connections>
+                                <segue destination="uDa-gY-2YL" kind="show" id="UyY-dv-2Df"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P1T-Kw-yX1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -63,24 +66,25 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="50" continuous="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hqt-kZ-EJs">
-                                <rect key="frame" x="27" y="91" width="118" height="31"/>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="5" minValue="0.0" maxValue="25" continuous="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hqt-kZ-EJs">
+                                <rect key="frame" x="18" y="91" width="226" height="31"/>
                                 <animations/>
                                 <connections>
                                     <action selector="sliderValueChanged:" destination="uDa-gY-2YL" eventType="valueChanged" id="Dne-xY-9cj"/>
+                                    <action selector="sliderValueChanged:" destination="uDa-gY-2YL" eventType="touchDragInside" id="R0X-nl-iCS"/>
                                 </connections>
                             </slider>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pOc-w9-IL5">
-                                <rect key="frame" x="29" y="145" width="42" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pOc-w9-IL5">
+                                <rect key="frame" x="20" y="135" width="123" height="21"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ob6-3m-65g">
-                                <rect key="frame" x="29" y="187" width="46" height="30"/>
+                                <rect key="frame" x="20" y="164" width="34" height="30"/>
                                 <animations/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="Save"/>
                                 <connections>
                                     <segue destination="5LO-6Q-hsj" kind="unwind" unwindAction="returnHere:" id="D0a-eh-8nc"/>
                                 </connections>
